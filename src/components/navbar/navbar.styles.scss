@@ -17,21 +17,23 @@
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    // background-color: ;
+    color: red;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
     background-color: #4CAF50;
-    color: white;
-    
+    color: white
+      
   }
   
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
   }
+
+
 
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */

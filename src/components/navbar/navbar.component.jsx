@@ -25,7 +25,7 @@ export default class Navbar extends Component {
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
-        <a href="#about" class="icon"onClick={this.toogleNavbar}>
+        <a href="#about" class="icon" onClick={this.toogleNavbar}>
         <GiHamburgerMenu />
         </a>
       </div>

@@ -7,6 +7,7 @@ export default class FuturedProducts extends Component {
     this.evt1 = React.createRef()
     this.evt2 = React.createRef()
     this.evt3 = React.createRef()
+
   }
 
   openCity = (evt) => {
@@ -20,23 +21,30 @@ export default class FuturedProducts extends Component {
       tablinks[i].className = tablinks[i].className.replace(" active", "")
     }
 
+    
 
     if (evt === "evt1") {
       this.evt1.current.style.display = "block"
-      console.log(this.evt1.current)
+      var bt1 = document.getElementById("bt1")
+      bt1.className += " active"
     }
     if (evt === "evt2") {
-      this.evt2.current.style.display= "block"
-      console.log(this.evt2.current)
+      this.evt2.current.style.display = "block"
+      var bt2 = document.getElementById("bt2")
+      bt2.className += " active"
     }
     if (evt === "evt3") {
       this.evt3.current.style.display = "block"
-      console.log(this.evt3.current)
+      var bt3 = document.getElementById("bt3")
+      bt3.className += " active"
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.evt1.current.style.display = "block"
+
+    var bt1 = document.getElementById("bt1")
+    bt1.className += " active"
   }
 
   render() {
@@ -46,44 +54,268 @@ export default class FuturedProducts extends Component {
 
         <div class="tab">
           <button
-            class="tablinks"
+            id="bt1"
+            class="tablinks "
             onClick={(e) => {
               this.openCity("evt1", e)
             }}
           >
-            London
+            Top Deals
           </button>
           <button
+          id="bt2"
             class="tablinks"
             onClick={(e) => {
               this.openCity("evt2", e)
             }}
           >
-            Paris
+            New In
           </button>
           <button
+            id="bt3"
             class="tablinks"
             onClick={(e) => {
               this.openCity("evt3", e)
             }}
           >
-            Tokyo
+            Most Liked
           </button>
         </div>
 
-        <div id="London" ref={this.evt1} class="tabcontent">
-          <h3>London</h3>
-          <p>London is the capital city of England.</p>
+        <div ref={this.evt1} class="tabcontent">
+          
+
+          <div className="flexContainer">
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+          </div>
         </div>
 
-        <div id="Paris" ref={this.evt2} class="tabcontent">
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
+        <div  ref={this.evt2} class="tabcontent">
+          <div className="flexContainer">
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+          </div>
         </div>
 
-        <div id="Tokyo" ref={this.evt3} class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+        <div  ref={this.evt3} class="tabcontent">
+          <div className="flexContainer">
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+            <div className="flexChild">
+              <img
+                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="h1"
+                id="img1"
+              />
+              <p>best bike ever</p>
+              <p>240$</p>
+            </div>
+          </div>
         </div>
       </div>
     )

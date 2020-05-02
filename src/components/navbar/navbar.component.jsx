@@ -3,7 +3,8 @@ import "./navbar.styles.scss"
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // components
-import NavbarIcon from "./navbarIcon/navbarIcon.component"
+import Sidebar from '../../components/sideBar/sidebar.component'
+
 
 export default class Navbar extends Component {
   toogleNavbar = () => {
@@ -18,16 +19,17 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">
+      <div className="topnav" id="myTopnav">
+        <a href="#home" className="active">
           Home
         </a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
-        <a href="#about" class="icon" onClick={this.toogleNavbar}>
+        <a href="#about" className="icon" onClick={this.toogleNavbar}>
         <GiHamburgerMenu />
         </a>
+        <Sidebar  />
       </div>
     )
   }

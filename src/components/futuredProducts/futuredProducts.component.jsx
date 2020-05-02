@@ -52,10 +52,10 @@ export default class FuturedProducts extends Component {
       <div>
         <h3>Fade in Tabs</h3>
 
-        <div class="tab">
+        <div className="tab">
           <button
             id="bt1"
-            class="tablinks "
+            className="tablinks "
             onClick={(e) => {
               this.openCity("evt1", e)
             }}
@@ -64,7 +64,7 @@ export default class FuturedProducts extends Component {
           </button>
           <button
           id="bt2"
-            class="tablinks"
+            className="tablinks"
             onClick={(e) => {
               this.openCity("evt2", e)
             }}
@@ -73,7 +73,7 @@ export default class FuturedProducts extends Component {
           </button>
           <button
             id="bt3"
-            class="tablinks"
+            className="tablinks"
             onClick={(e) => {
               this.openCity("evt3", e)
             }}
@@ -82,7 +82,7 @@ export default class FuturedProducts extends Component {
           </button>
         </div>
 
-        <div ref={this.evt1} class="tabcontent">
+        <div ref={this.evt1} className="tabcontent">
           
 
           <div className="flexContainer">
@@ -162,7 +162,7 @@ export default class FuturedProducts extends Component {
           </div>
         </div>
 
-        <div  ref={this.evt2} class="tabcontent">
+        <div  ref={this.evt2} className="tabcontent">
           <div className="flexContainer">
             <div className="flexChild">
               <img
@@ -240,7 +240,7 @@ export default class FuturedProducts extends Component {
           </div>
         </div>
 
-        <div  ref={this.evt3} class="tabcontent">
+        <div  ref={this.evt3} className="tabcontent">
           <div className="flexContainer">
             <div className="flexChild">
               <img

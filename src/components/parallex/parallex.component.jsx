@@ -7,7 +7,7 @@ export default class Parallex extends Component {
       <div>
        
         <div className="parallax">
-          <h1 class="h1"> Hi my name is hhhhh </h1>
+          <h1 className="h1"> Hi my name is hhhhh </h1>
         </div>
 
         <div className="div1">

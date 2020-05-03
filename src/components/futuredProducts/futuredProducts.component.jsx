@@ -50,8 +50,7 @@ export default class FuturedProducts extends Component {
   render() {
     return (
       <div>
-        <h3>Fade in Tabs</h3>
-
+     
         <div className="tab">
           <button
             id="bt1"

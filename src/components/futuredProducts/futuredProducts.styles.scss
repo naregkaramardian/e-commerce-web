@@ -16,18 +16,30 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 1rem;
-  margin: 0 2rem
+  margin: 0 2rem;
+//   transition: 0.1s padding-bottom ease-out
+border-bottom: 2px solid transparent; /* <- here */
+transition: border-bottom 1s, color 1s;
+
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
   color: rgb(117, 19, 93);
+  border-bottom: 2px solid rgb(117, 19, 93)
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  border: 10px;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid black;
+    transition: 0.35s padding-bottom linear
+
 }
+    .tab button.active:hover {
+    color: black;
+
+    }
 
 /* Style the tab content */
 .tabcontent {
@@ -62,11 +74,13 @@
     .flexChild{
         margin-top: 1rem;
         width:98%;
-        background-color: yellowgreen;
+       
         
         
         p{
             padding-left:  1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         #img1{
@@ -102,7 +116,7 @@
     .flexContainer{
         .flexChild{
             width:48%;
-            background-color: yellow;
+            
         }
         .flexChild:nth-child(4){
             display: inline;
@@ -120,7 +134,7 @@
     .flexContainer{
         .flexChild{
             width:33%;
-            background-color: yellow;
+            
         }
         .flexChild:nth-child(4){
             display: inline;
@@ -141,7 +155,7 @@
     .flexContainer{
         .flexChild{
             width:23%;
-            background-color: yellow;
+            
         }
         .flexChild:nth-child(4){
             display: inline;

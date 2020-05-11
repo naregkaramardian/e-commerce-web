@@ -6,10 +6,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    color: #f0f0f0;
+    color:#f0f0f0;
+    
 
     li:hover{
-        color: #43dde6;
+        color: #fc5185;
+        cursor: pointer;
     }
 
     .ft-flex-child{

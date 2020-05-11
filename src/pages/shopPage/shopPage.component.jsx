@@ -7,7 +7,7 @@ export default class ShopPage extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <h1>Shop Pageeeeeeeeeeeeee</h1>
             </div>
         )
     }

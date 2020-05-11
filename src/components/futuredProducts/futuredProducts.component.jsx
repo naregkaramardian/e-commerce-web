@@ -42,7 +42,6 @@ export default class FuturedProducts extends Component {
 
   componentDidMount() {
     this.evt1.current.style.display = "block"
-
     var bt1 = document.getElementById("bt1")
     bt1.className += " active"
   }
@@ -92,7 +91,7 @@ export default class FuturedProducts extends Component {
                 id="img1"
               />
               <p>best bike ever</p>
-              <p>240$</p>
+              <p>CA$240</p>
             </div>
             <div className="flexChild">
               <img
@@ -169,7 +168,7 @@ export default class FuturedProducts extends Component {
                 alt="h1"
                 id="img1"
               />
-              <p>best bike ever</p>
+              <p>best bike ever 22</p>
               <p>240$</p>
             </div>
             <div className="flexChild">
@@ -247,7 +246,7 @@ export default class FuturedProducts extends Component {
                 alt="h1"
                 id="img1"
               />
-              <p>best bike ever</p>
+              <p>best bike ever333</p>
               <p>240$</p>
             </div>
             <div className="flexChild">

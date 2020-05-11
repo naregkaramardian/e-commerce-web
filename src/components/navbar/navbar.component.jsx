@@ -20,13 +20,13 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="topnav" id="myTopnav">
-        <a href="#home" className="active">
+        <a href="#home" className="active topNav-a">
           Home
         </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#about" className="icon" onClick={this.toogleNavbar}>
+        <a href="#news" className="topNav-a">News</a>
+        <a href="#contact" className="topNav-a">Contact</a>
+        <a href="#about" className="topNav-a">About</a>     
+        <a href="#about" className="icon topNav-a" onClick={this.toogleNavbar}>
         <GiHamburgerMenu />
         </a>
         <Sidebar  />

@@ -1,5 +1,5 @@
 .px-main{
-  background-color: rgb(245, 246, 252,);
+  background:linear-gradient(to bottom , white , rgb(245, 246, 252));
   padding-top: 1rem;
 }
 
@@ -7,7 +7,8 @@
 
 .parallax {
     /* The image used */
-    background-image: url("https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   
     /* Set a specific height */
     min-height: 100vh; 
@@ -18,14 +19,23 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+  
+    h1{
+      padding-top: 20rem;
+      font-size: 4rem;
+      text-align: center;
+      color: white
+    }
+    #prl-a{
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      margin-left: 30%;
+      
+    }
 
     
  
-  }
-  
-  .h1{
-    margin: auto;
-      color: white
   }
 
   .px-about{
@@ -34,23 +44,27 @@
     font-size:36px ;
     padding-bottom: 7rem ;
     padding-top: 6rem ;
-  }
 
 
-.aboutHeader{
+    .aboutHeader{
       text-align: center;
       padding-top: 2rem;
       margin: 0;
-  }
+    }
 
 
-  .aboutPar{
-    text-align: center;
-    font-size: 1.5rem;
-    margin: auto;
-    width: 80%;
-    padding-top: 1rem;
+    .aboutPar{
+      text-align: center;
+      font-size: 1.5rem;
+      margin: auto;
+      width: 80%;
+      padding-top: 1rem;
+    }
+
+
+
   }
+
 
 
 
@@ -61,7 +75,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgb(245, 246, 252,) ;
+  background-color: rgb(245, 246, 252) ;
 
   .px-flexchild{
     margin: auto;
@@ -83,7 +97,22 @@
   }
 
 }
+
 @media screen and (min-width: 650px){
+  .parallax {
+    #prl-a{
+      margin-left: 45%;
+      border-bottom: 2px solid transparent; /* <- here */
+      transition: border-bottom 1s , padding-bottom 0.5s ;
+    }
+    #prl-a:hover{
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid white;
+      
+    }
+  
+  }
+
   .px-flexContainer{
     .px-flexchild{
     

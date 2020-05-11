@@ -11,7 +11,8 @@ export default class Parallex extends Component {
     return (
       <div className="px-main">
         <div className="parallax">
-          <h1 className="h1"> Hi my name is hhhhh </h1>
+          <h1> Find the perfect item in our special collection</h1>
+          <a id="prl-a" href="#news">Essentials</a>
         </div>
 
         <div className="px-flexContainer">

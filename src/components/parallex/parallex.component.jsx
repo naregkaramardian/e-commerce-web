@@ -59,7 +59,7 @@ export default class Parallex extends Component {
         <div className="px-about">
           <h3 className="aboutHeader"> ABOUT US </h3>
           <p className="aboutPar">
-            Welcome to bagsity.com. We are a team of enthusiastic developers and
+            Welcome to e-commerce. We are a team of enthusiastic developers and
             entrepreneurs who decided to convert their common experience into
             this web store. We hope you’ll like it as much as we do and have a
             great shopping experience here. Our prime goal is to create a shop

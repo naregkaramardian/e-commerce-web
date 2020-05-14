@@ -1,13 +1,15 @@
 import React, { Component } from "react"
 import "./futuredProducts.styles.scss"
 
+// import images
+import handbag from '../../assets/images/handbag1.jpg'
+
 export default class FuturedProducts extends Component {
   constructor(props) {
     super(props)
     this.evt1 = React.createRef()
     this.evt2 = React.createRef()
     this.evt3 = React.createRef()
-
   }
 
   openCity = (evt) => {
@@ -20,8 +22,6 @@ export default class FuturedProducts extends Component {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "")
     }
-
-    
 
     if (evt === "evt1") {
       this.evt1.current.style.display = "block"
@@ -47,9 +47,25 @@ export default class FuturedProducts extends Component {
   }
 
   render() {
+    
+      const items = []
+      for (let i = 0; i < 8; i++) {
+        items.push(
+          <div className="flexChild">
+            <img
+              src={handbag}
+              alt="h1"
+              id="img1"
+            />
+            <p> handbag </p>
+            <p>CA$240</p>
+          </div>
+        )
+      }
+    
+      
     return (
       <div>
-     
         <div className="tab">
           <button
             id="bt1"
@@ -61,7 +77,7 @@ export default class FuturedProducts extends Component {
             Top Deals
           </button>
           <button
-          id="bt2"
+            id="bt2"
             className="tablinks"
             onClick={(e) => {
               this.openCity("evt2", e)
@@ -81,239 +97,15 @@ export default class FuturedProducts extends Component {
         </div>
 
         <div ref={this.evt1} className="tabcontent">
-          
-
-          <div className="flexContainer">
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>CA$240</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-          </div>
+          <div className="flexContainer">{items}</div>
         </div>
 
-        <div  ref={this.evt2} className="tabcontent">
-          <div className="flexContainer">
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever 22</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-          </div>
+        <div ref={this.evt2} className="tabcontent">
+          <div className="flexContainer">{items}</div>
         </div>
 
-        <div  ref={this.evt3} className="tabcontent">
-          <div className="flexContainer">
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever333</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-            <div className="flexChild">
-              <img
-                src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="h1"
-                id="img1"
-              />
-              <p>best bike ever</p>
-              <p>240$</p>
-            </div>
-          </div>
+        <div ref={this.evt3} className="tabcontent">
+          <div className="flexContainer">{items}</div>
         </div>
       </div>
     )
